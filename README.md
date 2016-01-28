@@ -1,0 +1,1 @@
+Illustrate hsc2hs+cabal bug.
