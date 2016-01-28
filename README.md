@@ -34,10 +34,10 @@ Observed, buggy behavior:
     hsTest  = False
     hscTest = True
 
-If you instead configure with the flag disabled the first time, then
-`hscTest` is always `False`.
+Notice that `hscTest` is always `True`. If you instead configure with
+the flag disabled the first time, then `hscTest` is always `False`.
 
-Expected behavior:
+Expected behavior (by touching the .hsc file):
 
     $ for prefix in "+" "-"; do \
         touch src/HSC.hsc && \
