@@ -1,8 +1,5 @@
 module Main where
 
-import HS
-import HSC
+import Foo
 
-main = do
-  putStrLn $ "hsTest  = " ++ show hsTest
-  putStrLn $ "hscTest = " ++ show hscTest
+main = print foo

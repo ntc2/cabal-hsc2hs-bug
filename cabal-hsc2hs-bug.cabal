@@ -7,25 +7,9 @@ maintainer:          nathan.collins@gmail.com
 build-type:          Simple
 cabal-version:       >=1.10
 
-flag cabal_flag
-  description:         a Cabal flag
-  default:             True
-  manual:              True
-
-library
-  exposed-modules:     HS, HSC
-  other-extensions:    CPP
-  build-depends:       base
-  hs-source-dirs:      src
-  build-tools:         hsc2hs
-  default-language:    Haskell2010
-
-  if flag(cabal_flag)
-    cpp-options:         -DCPP_FLAG
-    cc-options:          -DCPP_FLAG
-
 executable bug
   main-is:             Main.hs
+  other-modules:       Foo
   hs-source-dirs:      bug
-  build-depends:       base, cabal-hsc2hs-bug
+  build-depends:       base
   default-language:    Haskell2010
